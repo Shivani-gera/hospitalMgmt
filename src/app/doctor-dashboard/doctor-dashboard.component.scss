@@ -1,0 +1,205 @@
+.doctor-dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.container {
+  height: 80vh;
+  width: 80vw;
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  flex-direction: row; /* Default layout for larger screens */
+  padding-top: 80px; /* Increased padding to move content down */
+}
+
+.cubebase-title {
+  position: absolute;
+  top: 40px; /* Increased from 25px to move title down */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 35px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  font-family: ui-sans-serif;
+  z-index: 1; /* Ensure it stays above other elements */
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.brand-title {
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold;
+  color: #000; /* Black color for the text */
+  margin-bottom: 1rem; /* Add spacing below the title */
+  text-align: center; /* Center align the text */
+  font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+.left-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.right-section-container {
+  background-color: #f9f9f9;
+  height: auto; /* Allow height to adjust based on content */
+  width: 90%; /* Ensure the container doesn't exceed its parent */
+  max-width: 32vw; /* Limit the maximum width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow: hidden; /* Prevent content from overflowing */
+
+  p {
+    align-self: flex-start; /* Aligns the paragraph to the left */
+    width: 100%; /* Takes full width of container */
+    margin-bottom: 1rem; /* Adds some space below the text */
+    padding-left: 1rem; /* Adds some padding from the left edge */
+  }
+}
+
+.right-section p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: gray;
+}
+
+.right-section form {
+  width: 100%; /* Ensure the form takes full width of the container */
+  max-width: 100%; /* Prevent the form from exceeding the container's width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.right-section input {
+  width: 100%; /* Make inputs take full width of the form */
+  max-width: 280px; /* Limit the maximum width of inputs */
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.right-section button {
+  padding: 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 150px; /* Fixed width for the button */
+  text-align: center;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.right-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    width: 90vw; /* Reduce width for smaller screens */
+    padding-top: 80px; /* Increase padding to accommodate title */
+  }
+
+  .left-section {
+    padding: 1.5rem;
+    align-items: center; /* Center align content for smaller screens */
+  }
+
+  .left-section h1 {
+    font-size: 2.5rem; /* Reduce font size for smaller screens */
+  }
+
+  .cubebase-title {
+    top: 30px; /* Adjusted for tablet view */
+    font-size: 30px;
+  }
+
+  .right-section-container {
+    height: auto; /* Allow height to adjust based on content */
+    width: 90%; /* Reduce width for smaller screens */
+    margin-top: 1rem; /* Reduced from 2rem to create more space */
+  }
+
+  .right-section form {
+    max-width: 100%; /* Allow form to take full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    width: 90vw; /* Reduce width for smaller screens */
+    padding-top: 70px;
+  }
+
+  .left-section h1 {
+    font-size: 2rem; /* Further reduce font size for very small screens */
+  }
+
+  .cubebase-title {
+    top: 25px; /* Adjusted for mobile view */
+    font-size: 26px;
+  }
+
+  .right-section-container {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .right-section input {
+    padding: 0.6rem; /* Reduce input padding */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .right-section button {
+    padding: 0.6rem; /* Reduce button size */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+}

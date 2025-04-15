@@ -1,0 +1,19 @@
+<!-- doctor-dashboard.component.html -->
+<div class="doctor-dashboard-wrapper">
+  <div class="container">
+    <p class="cubebase-title">Cubebase</p>
+    <div class="left-section">
+      <h1>Welcome Back</h1>
+    </div>
+    <div class="right-section">
+      <div class="right-section-container">
+        <p>Login with Email</p>
+        <form (submit)="onLogin()">
+          <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
+          <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
